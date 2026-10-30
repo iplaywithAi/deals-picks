@@ -1,0 +1,30 @@
+{
+  "name": "beiwatch-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BeiWatch API: price comparison, price tracking, scheduled scraping",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "make-admin": "node scripts/make-admin.js",
+    "seed:demo": "node scripts/seed-demo.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.0.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.2",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "node-cron": "^3.0.3",
+    "puppeteer": "^25.16.0"
+  }
+}
