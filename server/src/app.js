@@ -13,6 +13,7 @@ import trackingRoutes from './routes/tracking.js';
 // Builds the Express app without starting it, so tests can mount it on any port
 export function createApp() {
   const app = express();
+  app.set('trust proxy', 1);
   app.disable('x-powered-by');
   if (config.env === 'production') app.set('trust proxy', 1);
 

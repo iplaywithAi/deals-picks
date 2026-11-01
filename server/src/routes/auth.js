@@ -7,11 +7,11 @@ import { AUTH_COOKIE, requireAuth, setAuthCookie, signToken } from '../middlewar
 const router = Router();
 
 const authLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
+  windowMs: 5 * 60 * 1000,
   limit: 30,
   standardHeaders: 'draft-7',
   legacyHeaders: false,
-  message: { error: 'Too many attempts. Please wait 15 minutes and try again.' },
+  message: { error: 'Too many attempts. Please wait 5 minutes and try again.' },
 });
 
 const publicUser = (id) =>

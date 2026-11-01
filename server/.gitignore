@@ -1,4 +1,6 @@
 node_modules
 data
 .env
-beiwatch.db
+#beiwatch.db
+#beiwatch.db-shm
+#beiwatch.db-wal

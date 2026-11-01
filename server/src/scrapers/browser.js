@@ -50,6 +50,6 @@ export async function autoScroll(page) {
     });
     await sleep(1000);
   } catch {
-    // Lazy loading is best effort; keep whatever rendered
+   
   }
 }

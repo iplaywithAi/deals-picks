@@ -8,7 +8,7 @@ export const config = {
   port: Number(process.env.PORT) || 4000,
   env: process.env.NODE_ENV || 'development',
   jwtSecret: process.env.JWT_SECRET || 'dev-only-change-me',
-  dbFile: process.env.DB_FILE || path.join(serverRoot, 'data', 'beiwatch.db'),
+  dbFile: process.env.DB_FILE || path.join(serverRoot, 'data', 'deals&picks.db'),
   clientDist: path.resolve(serverRoot, '..', 'client', 'dist'),
   admin: {
     name: process.env.ADMIN_NAME || 'Administrator',

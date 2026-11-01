@@ -1,5 +1,8 @@
 // Cron expressions are evaluated in Africa/Nairobi on the server
 export const FREQUENCIES = [
+  { label: 'Every 1 hours', value: '0 */1 * * *' },
+  { label: 'Every 2 hours', value: '0 */2 * * *' },
+  { label: 'Every 3 hours', value: '0 */6 * * *' },
   { label: 'Every 6 hours', value: '0 */6 * * *' },
   { label: 'Every 12 hours', value: '0 */12 * * *' },
   { label: 'Daily at 02:00', value: '0 2 * * *' },
