@@ -5,6 +5,6 @@ data
 #beiwatch.db-shm
 #beiwatch.db-wal# build output and caches
 
-
+./client/dist
 
 
