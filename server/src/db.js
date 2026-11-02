@@ -234,15 +234,23 @@ function seedCategories() {
 }
 
 function seedAdmin() {
-  const { email, password, name } = config.admin;
+  const { email, name } = config.admin;
+  const password = config.admin.password?.trim();
   if (!email || !password) return;
   const normalised = email.trim().toLowerCase();
-  if (db.prepare('SELECT id FROM users WHERE email = ?').get(normalised)) return;
   const hash = bcrypt.hashSync(password, 12);
+  const existing = db.prepare('SELECT id FROM users WHERE email = ?').get(normalised);
+
+  if (existing) {
+    // Make the Render variables the source of truth for the admin account
+    db.prepare(`UPDATE users SET password_hash = ?, role = 'admin' WHERE id = ?`).run(hash, existing.id);
+    console.log(`[db] updated admin account ${normalised}`);
+    return;
+  }
+
   db.prepare(`INSERT INTO users (name, email, password_hash, role) VALUES (?, ?, ?, 'admin')`).run(name, normalised, hash);
   console.log(`[db] created admin account ${normalised}`);
 }
-
 seedCategories();
 for (const { slug } of db.prepare('SELECT slug FROM categories').all()) createProductTable(productTableName(slug));
 createProductTable(UNCATEGORISED_TABLE);
