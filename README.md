@@ -1,4 +1,4 @@
-# BeiWatch
+# Deals&Picks
 
 A price comparison site for Kenyan online stores. Shoppers browse categories, compare listings side by side, see price history, and track products against a target price. Admins control scraping through schedules, run jobs on demand, and manage categories, products and users.
 
@@ -24,7 +24,7 @@ A price comparison site for Kenyan online stores. Shoppers browse categories, co
 ## Project layout
 
 ```
-beiwatch/
+deals_picks/
 ├── server/
 │   ├── src/
 │   │   ├── index.js            Starts the server, recovers runs, syncs schedules
@@ -160,5 +160,7 @@ CHROME_PATH=/path/to/chrome npm test              # also runs browser fixture te
 ## Icons and design
 
 Icons are from Lucide. The palette is neutral slate with a single teal accent for states such as "target reached" and "best price", so the interface stays calm and the prices stand out.
-#   b e i w a t c h  
+#  deals&picks
+
+ 
  
