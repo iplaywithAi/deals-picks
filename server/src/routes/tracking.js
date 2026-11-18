@@ -3,6 +3,7 @@ import { db } from '../db.js';
 import { allProductsSource, JOIN_CATEGORY } from '../lib/products.js';
 import { requireAuth } from '../middleware/auth.js';
 import { toId } from '../utils/text.js';
+import { setFlagsFromString } from 'node:v8';
 
 const router = Router();
 router.use(requireAuth);
@@ -58,3 +59,7 @@ router.delete('/:productId', (req, res) => {
 });
 
 export default router;
+
+
+
+

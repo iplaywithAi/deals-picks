@@ -1,8 +1,8 @@
 {
-  "name": "beiwatch-server",
+  "name": "deals-picks-server",
   "version": "1.0.0",
   "private": true,
-  "description": "BeiWatch API: price comparison, price tracking, scheduled scraping",
+  "description": "Deals&Picks API: price comparison, price tracking, scheduled scraping",
   "type": "module",
   "main": "src/index.js",
   "engines": {

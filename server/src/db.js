@@ -10,9 +10,7 @@ export const db = new Database(config.dbFile);
 db.pragma('journal_mode = WAL');
 db.pragma('foreign_keys = ON');
 
-// Products are stored in one table per category (products_<slug>), plus products_uncategorised.
-// product_index owns every product id and records which table holds that product.
-// price_history and tracked_products are single tables keyed by product id, so a product keeps its history when it moves.
+
 export const UNCATEGORISED_TABLE = 'products_uncategorised';
 
 export function productTableName(slug) {

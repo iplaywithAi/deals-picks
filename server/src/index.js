@@ -8,6 +8,6 @@ const app = createApp();
 recoverInterruptedRuns();
 
 app.listen(config.port, () => {
-  console.log(`BeiWatch API listening on http://localhost:${config.port}`);
+  console.log(`Deals & Picks API listening on http://localhost:${config.port}`);
   syncSchedules();
 });

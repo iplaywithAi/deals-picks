@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import { db } from '../db.js';
 import { config } from '../config.js';
 
-export const AUTH_COOKIE = 'beiwatch_session';
+export const AUTH_COOKIE = 'deals_picks_session';
 const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
 
 // issuedAt (seconds) lets a caller set iat explicitly, used after a password change
